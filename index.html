@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bratva - Banco Deportivo</title>
+    <link rel="icon" type="image/png" href="FotoDeportiva1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-category-bar">
+        <span>PERSONAS</span>
+        <span>EQUIPOS</span>
+        <span>CLUBES E INSTITUCIONES</span>
+    </div>
+
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <span class="logo-b">B</span>
+                <span class="logo-text">BRATVA</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li class="dropdown">
+                    TARJETAS DEPORTIVAS ▾
+                    <ul class="dropdown-content">
+                        <li>Tarjeta Entrenamiento</li>
+                        <li>Tarjeta Elite Atleta</li>
+                        <li>Tarjeta Club Fans</li>
+                        <li>Tarjeta Black MVP</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    CUENTAS CLUB ▾
+                    <ul class="dropdown-content">
+                        <li>Cuenta Ahorro Equipo</li>
+                        <li>Cuenta Nómina Deportiva</li>
+                        <li>Inversión Alto Rendimiento</li>
+                        <li>Fondo Juvenil Promesas</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    PRÉSTAMOS ▾
+                    <ul class="dropdown-content">
+                        <li>Financiamiento de Estadios</li>
+                        <li>Préstamo para Equipamiento</li>
+                        <li>Crédito Victoria Personal</li>
+                        <li>Línea de Crédito Entrenamiento</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    PATROCINIOS ▾
+                    <ul class="dropdown-content">
+                        <li>Becas para Deportistas</li>
+                        <li>Sponsor de Eventos Locales</li>
+                        <li>Alianzas con Marcas</li>
+                        <li>Apoyo a Clubes UASD</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    SEGUROS ▾
+                    <ul class="dropdown-content">
+                        <li>Seguro de Salud Elite</li>
+                        <li>Seguro de Equipamiento</li>
+                        <li>Seguro de Vida Carrera</li>
+                        <li>Protección contra Lesiones</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <button class="btn-acceder" onclick="toggleLogin()">ACCEDER</button>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <h2>DESCUBRE LAS VENTAJAS QUE TE ESPERAN CON TU TARJETA DE CRÉDITO BRATVA</h2>
+                <p>Sin visitar estadios, solicita tu tarjeta y disfruta de beneficios desde tu primer entrenamiento.</p>
+                
+                <div class="qr-box">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=BratvaBank" alt="QR" class="qr-img">
+                    <div class="qr-text">
+                        <span>Escanea el código QR y descarga la App para elegir la tarjeta ideal.</span>
+                        <div class="store-buttons">
+                            <button class="badge">App Store</button>
+                            <button class="badge">Google Play</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleLogin()">&times;</span>
+            <h3>Banco Digital Bratva</h3>
+            <form>
+                <input type="text" placeholder="Usuario deportista">
+                <input type="password" placeholder="Contraseña">
+                <button type="submit" class="btn-login">Entrar a mi cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bottom-bar">
+        <div class="footer-item"><span>ⓘ</span> CONÓCENOS</div>
+        <div class="footer-item"><span>📍</span> OFICINAS Y CLUBES</div>
+        <div class="footer-item"><span>📊</span> CALCULADORAS</div>
+        <div class="footer-item"><span>📱</span> APLICACIONES</div>
+        <div class="footer-item"><span>🏅</span> BENEFICIOS</div>
+        
+    </footer>
+    <footer>
+<div class="copyright-section">
+        <p>© 2026 Bratva Banco Deportivo S.A. Todos los derechos reservados. <br> 
+        Proyecto Académico UASD - Abimael Perez Hernandez</p>
+    </div>
+    </footer>
+    <script>
+        function toggleLogin() {
+            var modal = document.getElementById("loginModal");
+            modal.style.display = (modal.style.display === "flex") ? "none" : "flex";
+        }
+        
+    
+        window.onclick = function(event) {
+            var modal = document.getElementById("loginModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
